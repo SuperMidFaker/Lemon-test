@@ -1,0 +1,25 @@
+hub:
+  image: selenium/hub
+  ports:
+    - 4444:4444
+  volumes:
+      - /dev/shm/:/dev/shm/
+firefox:
+  image: selenium/node-firefox-debug
+  ports:
+    - 5901:5900
+  links:
+    - hub
+chrome:
+  image: selenium/node-chrome-debug
+  ports:
+    - 5900:5900
+  environment:
+    - NODE_MAX_INSTANCES=5
+    - NODE_MAX_SESSION=5
+    - NODE_REGISTER_CYCLE=5000
+    - DBUS_SESSION_BUS_ADDRESS=/dev/null
+  volumes:
+    - /dev/shm/:/dev/shm/
+  links:
+    - hub
