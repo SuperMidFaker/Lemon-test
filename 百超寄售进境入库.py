@@ -51,7 +51,7 @@ class Costmn_I(unittest.TestCase):
         driver.find_element_by_xpath(
             u"(.//*[normalize-space(text()) and normalize-space(.)='数字化跨境供应链云平台'])[1]/following::input[1]").clear()
         driver.find_element_by_xpath(u"(.//*[normalize-space(text()) and normalize-space(.)='数字化跨境供应链云平台'])[1]/following::input[1]").send_keys(
-            "admin")
+            "welogix2")
         driver.find_element_by_xpath(
             u"(.//*[normalize-space(text()) and normalize-space(.)='数字化跨境供应链云平台'])[1]/following::input[2]").clear()
         driver.find_element_by_xpath(u"(.//*[normalize-space(text()) and normalize-space(.)='数字化跨境供应链云平台'])[1]/following::input[2]").send_keys(
